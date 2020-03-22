@@ -1,0 +1,29 @@
+{
+  "name": "covid-19-monitor",
+  "author": "Obaidur Rahman",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "odometer": "^0.4.8",
+    "source-map-support": "^0.5.12"
+  },
+  "devDependencies": {
+    "electron": "5.0.6",
+    "electron-builder": "^21.0.11",
+    "electron-webpack": "^2.7.4",
+    "file-loader": "^6.0.0",
+    "webpack": "~4.35.3"
+  },
+  "build": {
+    "appId": "covid19.counter",
+    "productName": "Covid19-Counter"
+  }
+}
